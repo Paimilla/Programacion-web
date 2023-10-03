@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <header class="header">
+        <h1>Votacion <span style="font-size: 2.5rem;">en linea</span></h1>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.php">Inicio</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="conteo.php">Conteo</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="votacion.php">subir voto</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="candidatos.html">subir candidato</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="votante.html">ingresar votante</a>
+    </nav>
+
+
+    <main class="contenedor">
+        <form action="candidatos.php" method="POST" enctype="multipart/form-data" class="formulario">
+
+            <fieldset>
+                <legend>Ingrese Candidato</legend>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        Ingrese su rut<br>
+                        <input class="input-text" type="text" id="rut" name="rut" value="" placeholder="ingrese su Rut"
+                            maxlength="12" minlength="12" required="">
+                    </div>
+                    <div class="campo">
+                        Ingrese la nombre
+                        <input class="input-text" type="text" id="nombre" name="nombre" value=""
+                            placeholder="ingrese nombre">
+                    </div>
+                    <div class="campo">
+                        ingrese apellido paterno
+                        <input class="input-text" type="text" id="apellido_p" name="apellido_p" value=""
+                            placeholder="ingrese apellido paterno">
+                    </div>
+                    <div class="campo">
+                        ingrese apellido materno
+                        <input class="input-text" type="tel" id="apellido_m" name="apellido_m" value=""
+                            placeholder="ingrese apellido materno">
+                        <div class="campo">
+                            ingrese direccion
+                            <input class="input-text" type="text" id="direccion" name="direccion" value=""
+                                placeholder="ingrese su direccion">
+                        </div> <!-- .contenedor-campos --> <br>
+                        <div class="alinear-derecha flex">
+                            <input class="boton w-sm-100" type="submit" value="Enviar">
+                        </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+<footer class="footer">
+    <p class="footer__texto">Felipe Paimilla - Todos los derechos Reservados 2022.</p>
+</footer>
+
+</html>
